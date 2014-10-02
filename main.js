@@ -43,7 +43,15 @@ function maxOfThree(x, y, z){
 
 function isVowel(char){
     "use strict";
-    //...
+    var vowel = ["a", "e", "i", "o", "u"]
+    for (var x = 0; x < vowel.length; i++) {
+        if (char === vowel[x]) {
+            return true;
+        }
+    }
+    else {
+        return false;
+    }
 }
 
 // ---------------------
