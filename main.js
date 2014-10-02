@@ -12,7 +12,7 @@
 // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript.
 // ---------------------
 
-function max(a, b){
+var num = function max(a, b){
     "use strict";
     if( a > b ) {
         return a
@@ -21,6 +21,8 @@ function max(a, b){
         return b
     }
 }
+
+console.log(num(3,11));
 
 // ---------------------
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
