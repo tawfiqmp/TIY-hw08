@@ -60,9 +60,14 @@ function isVowel(char){
 // Write a function translate() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
 // ---------------------
 
-function rovarspraket(){
+function rovarspraket(phrase){
     "use strict";
-    //...
+    var vowels = "aeiou";
+    return phrase.split("").map(function(letter){
+    return "aeiouAEIOU \"'/\\".indexOf(letter) >= 0 ? letter : letter+"o"+letter;
+
+    }).join("");
+    
 }
 
 // ---------------------
@@ -71,12 +76,16 @@ function rovarspraket(){
 
 function sum(){
     "use strict";
-    //...
+    var numbers = [1 , 2, 3, 4];
+    
+
+
 }
 
 function multiply(){
     "use strict";
-    //...
+    var numbers = [1, 2, 3, 4]
+    var 
 }
 
 // ---------------------
@@ -85,7 +94,11 @@ function multiply(){
 
 function reverse(){
     "use strict";
-    //...
+    
+
+
+
+
 }
 
 // ---------------------
@@ -126,6 +139,16 @@ function charFreq(string){
  * equality operator is bad, causes hard to track down bugs
  * it also forces a string to convert into a number in order to compare to anoher number affecting performance
  * strict equality operator is good, causes early breakage in code
+ * instanceof operator only useful when comparing made objects
+ * to cast a number, use the unary plus operator
+ * not using operator twice converts to a boolean
+ * typeof only has one use, to check if a variable is defined or not. It should be avoided otherwise.
+ * the best way to check for the type of an object use Object.prototype.toString instead of typeof
+ * instanceof doesn't work on objects that originate from different javascript contexts
+ * javascript will try to apply coercion wherever possible since it's weakly typed
+ * a value can easily be cast into a string by prepending an empty string
+ * using the not operator twice, any value can be convereted a boolean
+ * 
  * 
  */
 
