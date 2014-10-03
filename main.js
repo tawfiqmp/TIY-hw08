@@ -94,13 +94,10 @@ function multiply(){
 
 function reverse(words){
     "use strict";
-    var words = ['jag tester', 'hello world'];
-    words = words.split("")
-
-
-
-
-
+    var x = '';
+    for (var i = words.length - 1; i >= 0; i--)
+    x += words[i];
+    return x;
 }
 
 // ---------------------
