@@ -77,7 +77,7 @@ function rovarspraket(phrase){
 function sum(){
     "use strict";
     var numbers = [1 , 2, 3, 4];
-    
+
 
 
 }
@@ -92,9 +92,11 @@ function multiply(){
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse(){
+function reverse(words){
     "use strict";
-    
+    var words = ['jag tester', 'hello world'];
+    words = words.split("")
+
 
 
 
@@ -106,9 +108,20 @@ function reverse(){
 // ---------------------
 
 function findLongestWord(words){
-    "use strict";
-    //...
+    var str = string.split(" ");
+    var longest = 0;
+    var word = null;
+
+    str.forEach(function(str) {
+        if (longest < str.length) {
+            longest = str.length;
+            word = str;
+        }
+    });
+
+return word; 
 }
+
 
 // ---------------------
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
@@ -116,7 +129,17 @@ function findLongestWord(words){
 
 function filterLongWords(words, i){
     "use strict";
-    //...
+    var filterLongWords = new Array ("I", "will", "try", "to", "be", "the", "greatest");
+    var i = 3;
+    var list = function(filterLongWords) {
+        for (var g=0; g < filterLongWords.length; g++){
+            if (filterLongWords[g].length > i {
+                document.write(filterLongWords[g]);
+                console.log(filterLongWords[g]);
+            }
+        }
+    }
+
 }
 
 // ---------------------
@@ -125,9 +148,17 @@ function filterLongWords(words, i){
 
 function charFreq(string){
     "use strict";
-    //...
-}
+    var characters = {};
 
+    for (var i=0; i<string.length; i++){
+
+        characters[string[i]] = 
+            (characters[string[i]] === undefined) ?
+            1 : 
+            characters[string[i]]+1;
+    }
+    return characters;    
+}
 
 
 
